@@ -12,6 +12,7 @@ using AjudeQuemPrecisa.Core.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using AjudeQuemPrecisa.Core.Services.PedidosDeAjuda;
 
 namespace AjudeQuemPrecisa.Core
 {
@@ -34,6 +35,8 @@ namespace AjudeQuemPrecisa.Core
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
            services.AddRazorPages();
+
+           services.AddScoped<IPedidosDeAjudaService, PedidosDeAjudaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

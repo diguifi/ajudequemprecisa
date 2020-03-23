@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using AjudeQuemPrecisa.Core.Models.PedidosDeAjuda;
 
 namespace AjudeQuemPrecisa.Core.Data
 {
@@ -13,5 +11,7 @@ namespace AjudeQuemPrecisa.Core.Data
             : base(options)
         {
         }
+
+        public DbSet<PedidoDeAjuda> PedidosDeAjuda { get; set; }        
     }
 }
