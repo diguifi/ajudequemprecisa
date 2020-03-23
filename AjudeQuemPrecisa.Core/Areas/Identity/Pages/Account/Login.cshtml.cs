@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.ComponentModel;
 
 namespace AjudeQuemPrecisa.Core.Areas.Identity.Pages.Account
 {
@@ -44,13 +45,15 @@ namespace AjudeQuemPrecisa.Core.Areas.Identity.Pages.Account
         {
             [Required]
             [EmailAddress]
+            [DisplayName("E-mail")]
             public string Email { get; set; }
 
             [Required]
+            [DisplayName("Senha")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Esqueceu a senha?")]
             public bool RememberMe { get; set; }
         }
 
